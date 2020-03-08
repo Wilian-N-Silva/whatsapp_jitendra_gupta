@@ -8,3 +8,9 @@ See more redesigns on [Jitendra Gupta Behance](https://www.behance.net/jitoffici
 - <b>v.0.1.0</b>
     - Flutter's initial files.
     - README structure.
+
+- <b>v.0.2.0</b>
+    - Added data file.
+    - Added model to contacts.
+    - Added Home screen.
+    - Added Widgets folder.
