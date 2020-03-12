@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget contactStatus(String name, String imgUrl) {
+Widget contactStatus(String name, String imgUrl, {bool myStatus = false}) {
   List<String> nameSplit = name.split(" ");
   const double size = 60.0;
 
@@ -37,7 +37,7 @@ Widget contactStatus(String name, String imgUrl) {
             ),
           ),
         ),
-        Text(nameSplit[0]),
+        Text((!myStatus ? nameSplit[0] : 'My Status')),
       ],
     ),
   );

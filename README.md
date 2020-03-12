@@ -14,3 +14,8 @@ See more redesigns on [Jitendra Gupta Behance](https://www.behance.net/jitoffici
     - Added model to contacts.
     - Added Home screen.
     - Added Widgets folder.
+
+- <b>v.0.3.0</b>
+    - Added "My Status" on carousel with status viewer.
+    - Added profile picture to navigation bar.
+    

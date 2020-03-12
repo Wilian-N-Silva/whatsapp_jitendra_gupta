@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_jitendra_gupta/data/data.dart';
 
-Widget chatTile() {
+Widget chatTile({int counter}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 15.0),
     child: Container(
@@ -29,7 +29,7 @@ Widget chatTile() {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text('Name'),
+                Text('Name $counter'),
                 SizedBox(height: 7.0),
                 Row(
                   children: <Widget>[

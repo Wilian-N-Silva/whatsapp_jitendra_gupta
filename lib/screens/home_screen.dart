@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_jitendra_gupta/data/data.dart';
 import 'package:whatsapp_jitendra_gupta/widgets/chat_tile.dart';
 import 'package:whatsapp_jitendra_gupta/widgets/status_carrousel.dart';
 
@@ -39,22 +40,30 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {},
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 15.0),
-            child: Container(
-              width: 20.0,
-              height: 20.0,
-              child: Container(
-                height: 10.0,
-                width: 10.0,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    width: 1.7,
-                    color: Theme.of(context).primaryColor,
+            padding: EdgeInsets.only(right: 15.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  height: 23.0,
+                  width: 23.0,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      width: 2.0,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                  child: ClipOval(
+                    child: Image(
+                      height: 20.0,
+                      width: 20.0,
+                      image: AssetImage(user.profileImageUrl),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-                child: null,
-              ),
+              ],
             ),
           ),
         ],
@@ -63,15 +72,13 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: EdgeInsets.only(bottom: 70.0),
         child: ListView.builder(
           physics: BouncingScrollPhysics(),
-          itemCount: 15,
+          itemCount: 16,
           itemBuilder: (BuildContext context, int index) {
             //Reimplement needed. Logic created just for tests. !!
-            int showCarrousel = index;
-            if (showCarrousel == 0) {
+            if (index == 0) {
               return statusCarousel();
-            } else {
-              return chatTile();
             }
+            return chatTile(counter: index - 1);
           },
         ),
       ),
