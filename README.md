@@ -1,7 +1,33 @@
 # WhatsApp Redesign by Jitendra Gupta
 
-Flutter version of WhatsApp Redesign made by Jitendra Gupta.
-See more redesigns on [Jitendra Gupta Behance](https://www.behance.net/jitofficial)
+Flutter version of WhatsApp Redesign made by Jitendra Gupta.<br>
+See more redesigns on [Jitendra Gupta's Behance](https://www.behance.net/jitofficial)
+
+--- 
+
+## Progress
+
+### Data
+
+- [ ] User - 50%
+- [ ] Contact - 50%
+- [ ] Status
+- [ ] Chats list
+- [ ] Messages
+- [ ] Calls history
+
+
+### Screens
+
+- [ ] Lockscreen with biometric reading
+- [ ] Lockscreen with custom keyboard
+- [ ] Home - 75%
+- [ ] Settings Overlay
+- [ ] Calling
+- [ ] Incoming call
+
+
+---
 
 ## Commits
 
@@ -19,3 +45,6 @@ See more redesigns on [Jitendra Gupta Behance](https://www.behance.net/jitoffici
     - Added "My Status" on carousel with status viewer.
     - Added profile picture to navigation bar.
     
+- <b>v.0.3.1</b>
+    - Added screenshots from [Behance](https://www.behance.net/jitofficial).
+    - Added readme tasklist.
