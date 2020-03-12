@@ -120,15 +120,16 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             bottomNavButton(
               'Chats',
-              Icon(Icons.chat),
+              Icons.chat,
+              isActive: true,
             ),
             bottomNavButton(
               'Calls',
-              Icon(Icons.call),
+              Icons.call,
             ),
             bottomNavButton(
               'Contacts',
-              Icon(Icons.people),
+              Icons.people,
             ),
           ],
         ),

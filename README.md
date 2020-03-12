@@ -53,3 +53,6 @@ See more redesigns on [Jitendra Gupta's Behance](https://www.behance.net/jitoffi
 - <b>v.0.3.2</b>
     - Menu overlay.
     - Menu data.
+
+- <b>v.0.3.3</b>
+    - Bottom menu items color correction.

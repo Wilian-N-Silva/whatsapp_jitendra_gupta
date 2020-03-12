@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget bottomNavButton(String text, Icon icon) {
+Widget bottomNavButton(String text, IconData icon, {bool isActive = false}) {
   return GestureDetector(
     onTap: () {
       print(text);
@@ -8,9 +8,17 @@ Widget bottomNavButton(String text, Icon icon) {
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        icon,
+        Icon(
+          icon,
+          color: (!isActive ? Colors.grey : Colors.green[400]),
+        ),
         SizedBox(height: 5.0),
-        Text(text),
+        Text(
+          text,
+          style: TextStyle(
+            color: (!isActive ? Colors.grey : Colors.green[400]),
+          ),
+        ),
       ],
     ),
   );
