@@ -20,13 +20,21 @@ See more redesigns on [Jitendra Gupta's Behance](https://www.behance.net/jitoffi
 
 ### Screens
 
-- [ ] Lockscreen with biometric reading
-- [ ] Lockscreen with custom keyboard
-- [ ] Home - 75%
-- [x] Menu Overlay
-- [ ] Calling
-- [ ] Incoming call
-
+- [ ] Lockscreen
+    - [ ] Biometric unlock
+    - [ ] Custom keyboard
+- [x] Home
+    - [x] Status carousel
+    - [x] Message List
+    - [x] Bottom menu
+    - [x] Menu Overlay
+- [ ] Call
+    - [ ] Outgoin call
+    - [ ] Incoming call
+    - [ ] Call history
+- [ ] Contact
+    - [ ] Contact Profile
+    - [ ] Contact Chat
 
 ---
 
@@ -56,3 +64,6 @@ See more redesigns on [Jitendra Gupta's Behance](https://www.behance.net/jitoffi
 
 - <b>v.0.3.3</b>
     - Bottom menu items color correction.
+
+- <b>v.0.3.4</b>
+    - More readme details.
