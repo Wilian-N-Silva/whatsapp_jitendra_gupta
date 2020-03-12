@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_jitendra_gupta/data/data.dart';
+import 'package:whatsapp_jitendra_gupta/widgets/bottomNavigation.dart';
 import 'package:whatsapp_jitendra_gupta/widgets/chat_tile.dart';
+import 'package:whatsapp_jitendra_gupta/widgets/menuOverlay.dart';
 import 'package:whatsapp_jitendra_gupta/widgets/status_carrousel.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,6 +11,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  showOverlay(BuildContext context) async {
+    OverlayState overlayState = Overlay.of(context);
+    OverlayEntry overlayEntry;
+    overlayEntry = OverlayEntry(
+      builder: (context) => Positioned.fill(
+        child: overlayBody(overlayEntry, context),
+      ),
+    );
+
+    overlayState.insert(overlayEntry);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,32 +53,37 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             onPressed: () {},
           ),
-          Padding(
-            padding: EdgeInsets.only(right: 15.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  height: 23.0,
-                  width: 23.0,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      width: 2.0,
-                      color: Theme.of(context).primaryColor,
+          GestureDetector(
+            child: Padding(
+              padding: EdgeInsets.only(right: 15.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 23.0,
+                    width: 23.0,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        width: 2.0,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                    child: ClipOval(
+                      child: Image(
+                        height: 20.0,
+                        width: 20.0,
+                        image: AssetImage(user.profileImageUrl),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                  child: ClipOval(
-                    child: Image(
-                      height: 20.0,
-                      width: 20.0,
-                      image: AssetImage(user.profileImageUrl),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
+            onTap: () {
+              showOverlay(context);
+            },
           ),
         ],
       ),
@@ -74,7 +93,6 @@ class _HomeScreenState extends State<HomeScreen> {
           physics: BouncingScrollPhysics(),
           itemCount: 16,
           itemBuilder: (BuildContext context, int index) {
-            //Reimplement needed. Logic created just for tests. !!
             if (index == 0) {
               return statusCarousel();
             }
@@ -117,20 +135,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-}
-
-Widget bottomNavButton(String text, Icon icon) {
-  return GestureDetector(
-    onTap: () {
-      print(text);
-    },
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        icon,
-        SizedBox(height: 5.0),
-        Text(text),
-      ],
-    ),
-  );
 }

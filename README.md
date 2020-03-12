@@ -15,6 +15,7 @@ See more redesigns on [Jitendra Gupta's Behance](https://www.behance.net/jitoffi
 - [ ] Chats list
 - [ ] Messages
 - [ ] Calls history
+- [x] Menu options
 
 
 ### Screens
@@ -22,7 +23,7 @@ See more redesigns on [Jitendra Gupta's Behance](https://www.behance.net/jitoffi
 - [ ] Lockscreen with biometric reading
 - [ ] Lockscreen with custom keyboard
 - [ ] Home - 75%
-- [ ] Settings Overlay
+- [x] Menu Overlay
 - [ ] Calling
 - [ ] Incoming call
 
@@ -48,3 +49,7 @@ See more redesigns on [Jitendra Gupta's Behance](https://www.behance.net/jitoffi
 - <b>v.0.3.1</b>
     - Added screenshots from [Behance](https://www.behance.net/jitofficial).
     - Added readme tasklist.
+
+- <b>v.0.3.2</b>
+    - Menu overlay.
+    - Menu data.

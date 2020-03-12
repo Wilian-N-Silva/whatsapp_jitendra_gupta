@@ -1,13 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:whatsapp_jitendra_gupta/model/menu.dart';
 import 'package:whatsapp_jitendra_gupta/model/user.dart';
 import 'package:whatsapp_jitendra_gupta/model/contact.dart';
 
 final user = User(
   name: 'Alexa Perez',
-  about: '',
+  about: 'Just Living',
   profileImageUrl: 'assets/profile_pics/alex-perez-vXQza9AUe40-unsplash.jpg',
   myStatus: 'assets/status_pics/alex-perez-VLPLo-GtrIE-unsplash.jpg',
 );
-
 
 final contacts = [
   Contact(
@@ -53,4 +54,56 @@ final contacts = [
     profileImageUrl:
         'assets/profile_pics/mikayla-mallek-Zb_HYhU1K1I-unsplash.jpg',
   ),
+];
+
+final menuOptions = [
+  Menu(
+      leading: Icon(
+        Icons.vpn_key,
+        color: Colors.green[400],
+      ),
+      title: 'Account',
+      subtitle: 'Privacy, Security, Change Number'),
+  Menu(
+      leading: Icon(
+        Icons.chat,
+        color: Colors.green[400],
+      ),
+      title: 'Chats',
+      subtitle: 'Backups, History, Wallpaper'),
+  Menu(
+      leading: Icon(
+        Icons.notifications_none,
+        color: Colors.green[400],
+      ),
+      title: 'Notification',
+      subtitle: 'Messages, Group & Call Tones'),
+  Menu(
+      leading: Icon(
+        Icons.account_balance_wallet,
+        color: Colors.green[400],
+      ),
+      title: 'Payments',
+      subtitle: 'History, Bank Accounts'),
+  Menu(
+      leading: Icon(
+        Icons.data_usage,
+        color: Colors.green[400],
+      ),
+      title: 'Data and Storage Usage',
+      subtitle: 'Network Usage, Auto-Download'),
+  Menu(
+      leading: Icon(
+        Icons.help_outline,
+        color: Colors.green[400],
+      ),
+      title: 'Help',
+      subtitle: 'FAQ, Contact US, Privacy Policy'),
+  Menu(
+      leading: Icon(
+        Icons.people,
+        color: Colors.green[400],
+      ),
+      title: 'People',
+      subtitle: 'Invite a Friend'),
 ];
